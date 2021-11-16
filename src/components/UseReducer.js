@@ -1,8 +1,8 @@
 import React, { Fragment, useReducer } from 'react';
 
 import { Button } from '@mui/material';
-import logo from './logo.svg';
-import './App.css';
+import logo from '../logo.svg';
+import '../App.css';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -23,29 +23,16 @@ const reducer = (state, action) => {
   }
 };
 
-function App() {
+function UseReducerComponent() {
   const [state, dispatch] = useReducer(reducer, {
     visible: true,
     text: 'HIDE',
     counter: 0,
   });
 
-  // const [isVisible, setIsVisible] = useState({
-  //   visible: true,
-  //   text: 'HIDE',
-  //   counter: 0,
-  // });
-
   const clickHandler = () => {
     dispatch({ type: 'INCREMENT' });
     dispatch({ type: 'VISIBLE' });
-    // setIsVisible((prevState) => {
-    //   return {
-    //     visible: !prevState.visible,
-    //     text: prevState.text === 'SHOW' ? 'HIDE' : 'SHOW',
-    //     counter: prevState.counter + 1,
-    //   };
-    // });
   };
 
   return (
@@ -81,4 +68,4 @@ function App() {
   );
 }
 
-export default App;
+export default UseReducerComponent;
