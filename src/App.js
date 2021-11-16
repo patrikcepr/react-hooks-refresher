@@ -1,20 +1,17 @@
-import React, { useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 
 // import logo from './logo.svg';
-import './App.css';
+// import { Button } from '@mui/material';
 // import UseStateComponent from './components/UseState';
 // import UseReducerComponent from './components/UseReducer';
+import UseEffect from './components/UseEffect';
+import './App.css';
 
 function App() {
-  useEffect(() => {
-    // return () => {
-    //   cleanup
-    // }
-  }, []);
-
   return (
     <div className='App'>
+      {/* useEffect case */}
+      <UseEffect />
       {/* useState case
       <UseStateComponent /> */}
       {/* useReducerCase
