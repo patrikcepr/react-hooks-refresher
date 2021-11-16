@@ -5,20 +5,24 @@ import React from 'react';
 // import UseStateComponent from './components/UseState';
 // import UseReducerComponent from './components/UseReducer';
 // import UseEffect from './components/UseEffect';
-import UseRef from './components/UseRef';
+// import UseRef from './components/UseRef';
+import UseContext from './components/UseContext';
 import './App.css';
 
 function App() {
   return (
     <div className='App'>
+      {/* useContext case */}
+      <UseContext />
       {/* useEffect case */}
-      <UseRef />
-      {/* useEffect case */}
-      {/* <UseEffect /> */}
+      {/* <UseRef /> */}
+      {/* useEffect case */
+      /* <UseEffect /> */}
       {/* useState case
-      <UseStateComponent /> */}
+        <UseStateComponent /> */}
       {/* useReducerCase
-      <UseReducerComponent /> */}
+        <UseReducerComponent /> */}
+      {/* </UserContext.Provider> */}
     </div>
   );
 }
