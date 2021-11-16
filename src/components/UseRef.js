@@ -7,20 +7,22 @@ const UseRef = () => {
   const [nameOutput, setNameOutput] = useState(nameInput);
   const inputRef = useRef();
 
+  let name;
+
   const clickHandler = () => {
     inputRef.current.focus();
+    setNameInput(name);
   };
 
   const nameChangeHandler = (e) => {
-    const name = inputRef.current.value;
-    setNameInput(name);
+    name = inputRef.current.value;
   };
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setNameOutput(nameInput);
       console.log('Effect used');
-    }, 1000);
+    }, 100);
     return () => {
       clearTimeout(timer);
     };
