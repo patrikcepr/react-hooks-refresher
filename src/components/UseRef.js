@@ -4,25 +4,19 @@ import { Button, Input, Typography } from '@mui/material';
 
 const UseRef = () => {
   const [nameInput, setNameInput] = useState('Name');
-  const [nameOutput, setNameOutput] = useState(nameInput);
+  const [nameOutput, setNameOutput] = useState('Name');
   const inputRef = useRef();
-
-  let name;
 
   const clickHandler = () => {
     inputRef.current.focus();
-    setNameInput(name);
-  };
-
-  const nameChangeHandler = (e) => {
-    name = inputRef.current.value;
+    setNameInput(inputRef.current.value);
   };
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setNameOutput(nameInput);
       console.log('Effect used');
-    }, 100);
+    }, 300);
     return () => {
       clearTimeout(timer);
     };
@@ -37,7 +31,6 @@ const UseRef = () => {
         name='name'
         id='name'
         placeholder='Name'
-        onChange={nameChangeHandler}
       />
       <Button onClick={clickHandler}>Change name</Button>
     </div>
