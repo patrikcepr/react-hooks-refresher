@@ -4,14 +4,17 @@ import React from 'react';
 // import { Button } from '@mui/material';
 // import UseStateComponent from './components/UseState';
 // import UseReducerComponent from './components/UseReducer';
-import UseEffect from './components/UseEffect';
+// import UseEffect from './components/UseEffect';
+import UseRef from './components/UseRef';
 import './App.css';
 
 function App() {
   return (
     <div className='App'>
       {/* useEffect case */}
-      <UseEffect />
+      <UseRef />
+      {/* useEffect case */}
+      {/* <UseEffect /> */}
       {/* useState case
       <UseStateComponent /> */}
       {/* useReducerCase

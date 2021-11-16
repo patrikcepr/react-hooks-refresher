@@ -11,7 +11,6 @@ const reducer = (state, action) => {
         count: state.count + 1,
         data: state.data,
       };
-
     case 'LESS':
       return {
         count: state.count > 1 ? state.count - 1 : state.count,
@@ -28,8 +27,6 @@ const reducer = (state, action) => {
 };
 
 const UseEffect = () => {
-  // const [data, setData] = useState([]);
-
   const [state, dispatch] = useReducer(reducer, { data: [], count: 5 });
 
   const moreHandler = () => {
